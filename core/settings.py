@@ -29,7 +29,9 @@ if not DEBUG:
     ALLOWED_HOSTS = [
         "solopython.com",
         ".solopython.com",
-        "www.solopython.com"
+        "www.solopython.com",
+        "https://solopython.onrender.com",
+        "solopython.onrender.com",
     ]
 
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
@@ -132,10 +134,12 @@ CSRF_TRUSTED_ORIGINS = [
 if not DEBUG:
     CORS_ORIGIN_WHITELIST = [
         'https://solopython.com',
+        "https://solopython.onrender.com"
     ]
 
     CSRF_TRUSTED_ORIGINS = [
         'https://solopython.com',
+        "https://solopython.onrender.com"
     ]
 
 
